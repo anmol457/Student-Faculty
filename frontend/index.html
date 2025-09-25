@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student-Faculty Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student-Faculty Management System</h1>
+    <div class="container">
+
+        <!-- Departments -->
+        <div class="card">
+            <h2>Departments</h2>
+            <form id="deptForm">
+                <input type="text" id="deptName" placeholder="Department Name" required>
+                <select id="headDeptSelect">
+                    <option value="">Head of Department (Optional)</option>
+                </select>
+                <button type="submit">Add Department</button>
+            </form>
+            <table id="deptTable">
+                <thead>
+                    <tr><th>Name</th><th>Head</th><th>Action</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Faculty -->
+        <div class="card">
+            <h2>Faculty</h2>
+            <form id="facultyForm">
+                <input type="text" id="facultyFirst" placeholder="First Name" required>
+                <input type="text" id="facultyMiddle" placeholder="Middle Name">
+                <input type="text" id="facultyLast" placeholder="Last Name" required>
+                <select id="facultyDept" required></select>
+                <input type="text" id="facultyDesig" placeholder="Designation">
+                <input type="text" id="facultyPhone" placeholder="Phone">
+                <input type="email" id="facultyEmail" placeholder="Email" required>
+                <button type="submit">Add Faculty</button>
+            </form>
+            <table id="facultyTable">
+                <thead>
+                    <tr><th>Name</th><th>Dept</th><th>Designation</th><th>Email</th><th>Action</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Students -->
+        <div class="card">
+            <h2>Students</h2>
+            <form id="studentForm">
+                <input type="text" id="studentFirst" placeholder="First Name" required>
+                <input type="text" id="studentMiddle" placeholder="Middle Name">
+                <input type="text" id="studentLast" placeholder="Last Name" required>
+                <select id="studentDept" required></select>
+                <input type="date" id="studentDOB">
+                <input type="text" id="studentPhone" placeholder="Phone">
+                <input type="email" id="studentEmail" placeholder="Email" required>
+                <button type="submit">Add Student</button>
+            </form>
+            <table id="studentTable">
+                <thead>
+                    <tr><th>Name</th><th>Dept</th><th>Email</th><th>Action</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Courses -->
+        <div class="card">
+            <h2>Courses</h2>
+            <form id="courseForm">
+                <input type="text" id="courseName" placeholder="Course Name" required>
+                <input type="number" id="courseCredits" placeholder="Credits" required>
+                <select id="courseDept" required></select>
+                <button type="submit">Add Course</button>
+            </form>
+            <table id="courseTable">
+                <thead>
+                    <tr><th>Name</th><th>Credits</th><th>Dept</th><th>Action</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Faculty-Course Assignment -->
+        <div class="card">
+            <h2>Assign Faculty to Course</h2>
+            <form id="facultyCourseForm">
+                <select id="assignFaculty" required></select>
+                <select id="assignCourse" required></select>
+                <button type="submit">Assign</button>
+            </form>
+            <table id="facultyCourseTable">
+                <thead><tr><th>Faculty</th><th>Course</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Student-Course Enrollment -->
+        <div class="card">
+            <h2>Enroll Student in Course</h2>
+            <form id="studentCourseForm">
+                <select id="enrollStudent" required></select>
+                <select id="enrollCourse" required></select>
+                <button type="submit">Enroll</button>
+            </form>
+            <table id="studentCourseTable">
+                <thead><tr><th>Student</th><th>Course</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
